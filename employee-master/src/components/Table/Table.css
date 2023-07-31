@@ -1,0 +1,97 @@
+ .table th, .table td{
+
+    border-bottom: 1pt solid gray; 
+    padding: 15px; 
+    text-align: left;
+    /* width: 20%; */
+
+}
+.last > *{
+    padding:  0 20px;
+}
+.table{
+    width: 100%;
+    border-collapse:collapse;
+}
+.pagination td{
+    padding: 0;
+}
+.pagination_container{
+    list-style: none;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.pagination_container a{
+    padding: 3px 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.pagination_Active a{
+    background: rgba(128, 128, 128, 0.26);
+}
+.Pervious{
+    text-decoration: none;
+}
+.resposive_table{
+    display: none;
+}
+.number , .address{
+  display: none;
+}
+.update{
+  padding-left: 40px !important;
+}
+  @media screen and (max-width: 600px) {
+    .resposive_table {
+        display: inline;
+      border: 0;
+    }
+  
+    .table caption {
+        display: none;
+      font-size: 1.3em;
+    }
+    
+    .table thead {
+      border: none;
+      /* clip: rect(0 0 0 0); */
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    .table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+      border: 1px solid;
+    }
+    
+    .table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+  
+    .table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    .table td:last-child {
+      border-bottom: 0;
+    }
+  }
